@@ -53,6 +53,6 @@ class TodoRepositoryImpl implements TodoRepository {
 
   String _extractMessage(Object error) {
     if (error is AppException) return error.message;
-    return 'Erro inesperado';
+    return error.toString();
   }
 }

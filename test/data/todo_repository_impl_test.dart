@@ -44,6 +44,7 @@ void main() {
     ).thenAnswer((_) async => 'token');
     when(() => todoRemoteDataSource.getTodos('token')).thenAnswer((_) async => mockTodos);
     when(() => todoLocalDataSource.cacheTodos(mockTodos)).thenAnswer((_) async {});
+    when(() => todoLocalDataSource.getCachedTodos()).thenAnswer((_) async => []);
 
     final result = await repository.getTodos(isConnected: true);
 
