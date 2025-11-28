@@ -1,4 +1,4 @@
-# To-Do Infornet
+# To-Do Infornet Teste técnico
 
 Aplicativo Flutter offline-first que autentica em uma API REST, busca a lista de tarefas e mantem um cache local para uso sem internet. Usa Clean Architecture, GetX para estado/navegacao/DI e Hive para persistencia.
 
@@ -6,11 +6,12 @@ Aplicativo Flutter offline-first que autentica em uma API REST, busca a lista de
 - Flutter 3.24+
 - Dart 3.8+
 
-## Como rodar
+## Para rodar o To-do Infornet
 1. Instale as dependências: `flutter pub get`
-2. Rode o app: `flutter run`
+2. Caso limpar o cache do dart, para configurar o icone e splashscreen: `dart run flutter_native_splash:create`  e  `dart run flutter_launcher_icons`
+3. Rode o app: `flutter run`
 
-## Como testar
+## Como testar tudo
 - `flutter test`
 
 ## Arquitetura
@@ -24,7 +25,3 @@ Aplicativo Flutter offline-first que autentica em uma API REST, busca a lista de
 - Na inicializacao, verifica conexao; se online autentica, busca tarefas e atualiza o cache Hive. Se offline, carrega apenas do cache.
 - Botao de atualizar segue a mesma regra: online = busca + cache; offline = recarrega cache e avisa o usuario.
 - Cache armazenado em Hive (`todos_box`) sem necessidade de modelos registrados.
-
-## API
-- Autenticacao: `POST http://lf.infornet.com.br:3010/auth` com headers `x-login: testeFlutter`, `x-senha: #Qsy&_@73bh`.
-- Tarefas: `GET http://lf.infornet.com.br:3010/todos` com header `Authorization: Bearer <TOKEN>`.
