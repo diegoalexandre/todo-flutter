@@ -1,0 +1,47 @@
+name: todo_infornet
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.6
+  dio: ^5.7.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  connectivity_plus: ^6.0.5
+  path_provider: ^2.1.4
+  equatable: ^2.0.5
+  cupertino_icons: ^1.0.8
+  flutter_dotenv: ^5.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  mocktail: ^1.0.3
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - assets/icons/todo_infornet.png
+
+# Configuração do ícone do app
+flutter_launcher_icons:
+  image_path: "assets/icons/todo_infornet.png"
+  android: true
+  ios: true
+
+flutter_native_splash:
+  color: "#3B82F6"
+  image: assets/images/splash.png
+  android: true
+  ios: true
